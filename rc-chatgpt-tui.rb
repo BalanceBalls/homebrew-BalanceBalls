@@ -5,20 +5,20 @@
 class RcChatgptTui < Formula
   desc ""
   homepage "https://github.com/BalanceBalls/chatgpt-tui"
-  version "0.7.0-rc"
+  version "0.7.1-rc"
   depends_on :macos
 
   if Hardware::CPU.arm?
-    url "https://github.com/BalanceBalls/nekot/releases/download/v0.7.0-rc/nekot_0.7.0-rc_darwin_arm64.zip"
-    sha256 "d3575b3c92d2d2660a68d5eb3344a723b36fa44a8ae5cc57ee63f1e2d0de2299"
+    url "https://github.com/BalanceBalls/nekot/releases/download/v0.7.1-rc/nekot_0.7.1-rc_darwin_arm64.zip"
+    sha256 "de964614097f8ae0f74310510d3cfd4038a32e0227e9a7c3abc6bc6e07d154a8"
 
     def install
       bin.install "bin/rc-chatgpt-tui"
     end
   end
   if Hardware::CPU.intel?
-    url "https://github.com/BalanceBalls/nekot/releases/download/v0.7.0-rc/nekot_0.7.0-rc_darwin_amd64.zip"
-    sha256 "d3f738a2b3afb0d488a64d69601befb67da0f3a907675b10abe08ae2d2488efa"
+    url "https://github.com/BalanceBalls/nekot/releases/download/v0.7.1-rc/nekot_0.7.1-rc_darwin_amd64.zip"
+    sha256 "dd67e988124eb4057a48faa600259d7ff400dfcd7de7ed97c9a64d5b977e5e06"
 
     def install
       bin.install "bin/rc-chatgpt-tui"
