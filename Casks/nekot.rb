@@ -2,7 +2,7 @@
 cask "nekot" do
   desc ""
   homepage "https://github.com/BalanceBalls/nekot"
-  version "0.7.3"
+  version "0.7.5"
 
   livecheck do
     skip "Auto-generated on release."
@@ -12,23 +12,23 @@ cask "nekot" do
 
   on_macos do
     on_intel do
-      url "https://github.com/BalanceBalls/nekot/releases/download/v0.7.3/nekot_0.7.3_darwin_amd64.tar.gz"
-      sha256 "7741f858996a9d4d7b6858169b530d55288e64b64abdacdc55cfdfdd0f1a0f9f"
+      url "https://github.com/BalanceBalls/nekot/releases/download/v0.7.5/nekot_0.7.5_darwin_amd64.tar.gz"
+      sha256 "4c04348de6e4797e5c3d63bde35ebd13f39a156029b0798b74830a32a2af90a1"
     end
     on_arm do
-      url "https://github.com/BalanceBalls/nekot/releases/download/v0.7.3/nekot_0.7.3_darwin_arm64.tar.gz"
-      sha256 "1ea0dd7b3fb51f288f4e73ec76e89601494cf6ea9431494e763ede798a6c7276"
+      url "https://github.com/BalanceBalls/nekot/releases/download/v0.7.5/nekot_0.7.5_darwin_arm64.tar.gz"
+      sha256 "976325f4bf194af2d9d467c8b21a1b6489cac349e6bdb9f28b84840ef18ad9b8"
     end
   end
 
   on_linux do
     on_intel do
-      url "https://github.com/BalanceBalls/nekot/releases/download/v0.7.3/nekot_0.7.3_linux_amd64.tar.gz"
-      sha256 "809fd631f2e4f97522240468995be7fd2eb366586aa9dd4feb5956921496bd09"
+      url "https://github.com/BalanceBalls/nekot/releases/download/v0.7.5/nekot_0.7.5_linux_amd64.tar.gz"
+      sha256 "a76332f0b220e7b8eb1485c4a480c448be480241567cbb8f45c9279eb5a7eca7"
     end
     on_arm do
-      url "https://github.com/BalanceBalls/nekot/releases/download/v0.7.3/nekot_0.7.3_linux_arm64.tar.gz"
-      sha256 "c374bedd8bc5dd919eaeb9e7f616881aaefc75d99e293118356c2fb4b9d78803"
+      url "https://github.com/BalanceBalls/nekot/releases/download/v0.7.5/nekot_0.7.5_linux_arm64.tar.gz"
+      sha256 "0a95681844a33a98444e6fa108a7d29280369ddb6fe24a024f9ca2497613a7ad"
     end
   end
 
@@ -37,8 +37,10 @@ cask "nekot" do
     ]
 
   postflight do
-    if system_command("/usr/bin/xattr", args: ["-h"]).exit_status == 0
-      system_command "/usr/bin/xattr", args: ["-d", "com.apple.quarantine", "#{staged_path}/nekot"]
+    if OS.mac?
+      if system_command("/usr/bin/xattr", args: ["-h"]).exit_status == 0
+        system_command "/usr/bin/xattr", args: ["-d", "com.apple.quarantine", "#{staged_path}/nekot"]
+      end
     end
   end
 
