@@ -2,7 +2,7 @@
 cask "nekot" do
   desc ""
   homepage "https://github.com/BalanceBalls/nekot"
-  version "0.7.5"
+  version "0.7.6"
 
   livecheck do
     skip "Auto-generated on release."
@@ -12,23 +12,23 @@ cask "nekot" do
 
   on_macos do
     on_intel do
-      url "https://github.com/BalanceBalls/nekot/releases/download/v0.7.5/nekot_0.7.5_darwin_amd64.tar.gz"
-      sha256 "4c04348de6e4797e5c3d63bde35ebd13f39a156029b0798b74830a32a2af90a1"
+      url "https://github.com/BalanceBalls/nekot/releases/download/v0.7.6/nekot_0.7.6_darwin_amd64.tar.gz"
+      sha256 "b15573dc361f79a3d62a1ef5996cdb0b2c9aa4297ffd1e7321f3832afc0314be"
     end
     on_arm do
-      url "https://github.com/BalanceBalls/nekot/releases/download/v0.7.5/nekot_0.7.5_darwin_arm64.tar.gz"
-      sha256 "976325f4bf194af2d9d467c8b21a1b6489cac349e6bdb9f28b84840ef18ad9b8"
+      url "https://github.com/BalanceBalls/nekot/releases/download/v0.7.6/nekot_0.7.6_darwin_arm64.tar.gz"
+      sha256 "35295e99e2f94f9ff2be7da1016d3ec365d4ecfe833f1b20547f078635f1bbc8"
     end
   end
 
   on_linux do
     on_intel do
-      url "https://github.com/BalanceBalls/nekot/releases/download/v0.7.5/nekot_0.7.5_linux_amd64.tar.gz"
-      sha256 "a76332f0b220e7b8eb1485c4a480c448be480241567cbb8f45c9279eb5a7eca7"
+      url "https://github.com/BalanceBalls/nekot/releases/download/v0.7.6/nekot_0.7.6_linux_amd64.tar.gz"
+      sha256 "5d85d24b7125dcd01a56917a6d8cb654384ceeb7cd1050fd739026ce89614809"
     end
     on_arm do
-      url "https://github.com/BalanceBalls/nekot/releases/download/v0.7.5/nekot_0.7.5_linux_arm64.tar.gz"
-      sha256 "0a95681844a33a98444e6fa108a7d29280369ddb6fe24a024f9ca2497613a7ad"
+      url "https://github.com/BalanceBalls/nekot/releases/download/v0.7.6/nekot_0.7.6_linux_arm64.tar.gz"
+      sha256 "f3b1f54bf4ccebb073286596ea9f9389b677ed46ae4bcff1390f35561f71c85e"
     end
   end
 
